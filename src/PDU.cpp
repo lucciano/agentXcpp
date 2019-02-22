@@ -201,7 +201,7 @@ void PDU::add_header(type_t type, binary& payload) const
     if(new_index)             flags |= (1<<1);
     if(any_index)             flags |= (1<<2);
     if(non_default_context)   flags |= (1<<3);
-		              flags |= (1<<4);	// We always use big endian
+    flags |= (1<<4);	// We always use big endian
     header.push_back(flags);
 
     // reserved field
